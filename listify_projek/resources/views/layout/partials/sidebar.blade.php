@@ -57,7 +57,7 @@
                 <a href="/" class="nav-link">
 
                     <p>
-                        Menu
+                        Dashboard
 
                     </p>
                 </a>
