@@ -2,11 +2,11 @@
 
 <hr>
 Dengan menggunakan aplikasi jadwal dan penyimpanan tugas yang bernama listify ini,  kita dapat dengan mudah membuat dan mengatur jadwal kegiatan atau tugas yang harus dikerjakan. Dalam banyak kasus, manusia memiliki keterbatasan dalam mengingat dan mengatur banyaknya tugas yang harus dikerjakan dalam waktu yang terbatas. Aplikasi jadwal dan penyimpanan tugas dapat membantu mengatasi keterbatasan ini. 
-
+<hr>
 ### IncludeDev Team
 
 ### MEMBERS:
-<hr>
+
 <ul>
    <li>Siti Nurrahmasita : 2108107010015</li>
    <li>Dhaifina Alifa Putri : 2108107010018</li>
