@@ -1,3 +1,5 @@
+use Carbon\Carbon;
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,7 +45,7 @@
     <td>{{ $no++}}</td>
     <td>{{ $row->nama }}</td>
     <td>{{ $row->status }}</td>
-    <td>{{ $row->deadline->format('d M Y')}}</td>
+    <td>{{ \Carbon\Carbon::parse($row->deadline)->format('d M Y') }}</td>
   </tr>  
   @endforeach
   

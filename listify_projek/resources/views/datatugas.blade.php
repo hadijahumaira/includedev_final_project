@@ -1,3 +1,4 @@
+use Carbon\Carbon;
 @extends('layout.admin')
 @push('css')
       <!-- Bootstrap CSS -->
@@ -77,8 +78,7 @@
                                     <th scope="row">{{ $index + $data->firstItem() }}</th>
                                     <td>{{ $row->nama }}</td>
                                     <td>{{ $row->status }}</td>
-                                    <td>{{ $row->deadline->format('d M Y') }}</td>
-                                    <td>{{ $row->created_at->format('d M Y') }}</td>
+                                    <td>{{ \Carbon\Carbon::parse($row->deadline)->format('d M Y') }}</td>                                    <td>{{ $row->created_at->format('d M Y') }}</td>
                                     <td>
                                         <a href="/tampilkandata/{{ $row->id }}" class="btn btn-info">Edit</a>
                                         <a href="#" class="btn btn-danger delete" data-id="{{ $row->id }}"
