@@ -19,7 +19,7 @@
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <nav class="navbar navbar-expand-lg  text-uppercase fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand" href="#page-top">listify</a>
                
@@ -35,7 +35,7 @@
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="assets/img/logolistify.png" alt="..." />
+                <img src="{{ asset('template/dist/img/SCLogo.png') }}" alt="SCLogo" height="15%" width="15%">
                 <!-- Masthead Heading-->
                 <h1 class="masthead-heading text-uppercase mb-0">Listify</h1>
                 <!-- Icon Divider-->
