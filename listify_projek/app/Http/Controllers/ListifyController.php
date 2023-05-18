@@ -95,7 +95,7 @@ class ListifyController extends Controller
         $data = listify::all();
 
         view()->share('data', $data);
-        $pdf = PDF::loadview('datatugas-pdf');
+        $pdf = \Barryvdh\DomPDF\Facade\Pdf::loadview('datatugas-pdf');
         return $pdf->download('data.pdf');
     }
 
