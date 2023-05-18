@@ -29,6 +29,10 @@ Route::get('/', function () {
     return view('welcome',compact('notif', 'jumlahtugas','jumlahtodolist','jumlahdoinglist','jumlahdonelist', 'data'));
 })->name('home')->middleware('auth');
 
+Route::get('landingpage', function(){
+    return view('landingpage');
+});
+
 Route::get('/tugas',[ListifyController::class, 'index'])->name('tugas')->middleware('auth');
 
 Route::get('/tambahtugas',[ListifyController::class, 'tambahtugas'])->name('tambahtugas');
