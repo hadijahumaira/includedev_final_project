@@ -39,6 +39,6 @@ class LoginController extends Controller
     
     public function logout(){
         Auth::logout();
-        return \redirect('landingpage');
+        return \redirect('/');
     }
 }
