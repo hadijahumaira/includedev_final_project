@@ -15,7 +15,7 @@ class LoginController extends Controller
 
     public function loginproses(Request $request){
         if(Auth::attempt($request->only('email','password'))){
-            return redirect('/');
+            return redirect('/home');
         }
 
         return \redirect('login');
@@ -39,6 +39,6 @@ class LoginController extends Controller
     
     public function logout(){
         Auth::logout();
-        return \redirect('login');
+        return \redirect('/');
     }
 }
