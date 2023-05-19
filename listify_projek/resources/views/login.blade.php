@@ -4,8 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Login </title>
-
+  <title>Login</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet"
@@ -16,66 +15,46 @@
   <link rel="stylesheet" href="{{ asset('template/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('template/dist/css/adminlte.min.css') }}">
+  <link href="resources/css/app.css" rel="stylesheet">
+  @vite('resources/css/app.css')
+
 </head>
 
-
-  <body class="login-page" background = "{{ asset('template/dist/img/bglistify.jpg') }}">
-  <div class="login-box">
-    <!-- /.login-logo -->
-    <div class="card card-outline card-primary">
-      <div class="card-header text-center">
-        <h1><b>LOG IN</b></h1>
+<body class="bg-cover bg-no-repeat bg-center" style="background-image: url('{{ asset('template/dist/img/bglistify.jpg') }}')">
+  <div class="flex items-center justify-center min-h-screen">
+    <div class="max-w-md w-1/2 h-1/4 mx-auto">
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="px-6 py-4">
+          <h1 class="text-3xl font-bold text-center">LOG IN</h1>
+        </div>
+        <div class="p-6">
+          <form action="/loginproses" method="post">
+            @csrf
+            <div class="mb-4">
+              <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-indigo-500"
+                name="email" placeholder="Email">
+            </div>
+            <div class="mb-4">
+              <input type="password" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-indigo-500"
+                name="password" placeholder="Password">
+            </div>
+            <div class="flex items-center mb-4">
+              <input type="checkbox" id="remember"
+                class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+              <label for="remember" class="ml-2 text-sm text-gray-600">Remember Me</label>
+            </div>
+            <div class="text-center">
+              <button type="submit"
+                class="w-full px-4 py-2 rounded-lg text-white bg-indigo-500 hover:bg-indigo-600 focus:outline-none">Sign In</button>
+            </div>
+          </form>
+        </div>
+        <div class="px-6 py-4 bg-gray-100">
+          <p class="text-sm text-center">Don't have an account? <a href="/register" class="text-indigo-500">Register</a></p>
+        </div>
       </div>
-      <div class="card-body">
-
-        <form action="/loginproses" method="post">
-        @csrf
-          <div class="input-group mb-3">
-            <input type="email" class="form-control" name="email" placeholder="Email">
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-envelope"></span>
-              </div>
-            </div>
-          </div>
-          <div class="input-group mb-3">
-            <input type="password" class="form-control" name="password" placeholder="Password">
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-lock"></span>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-8">
-              <div class="icheck-primary">
-                <input type="checkbox" id="remember">
-                <label for="remember">
-                  Remember Me
-                </label>
-              </div>
-            </div>
-            <!-- /.col -->
-            <div class="col-4">
-              <button type="submit" class="btn btn-primary btn-block">Sign In</button>
-            </div>
-            <!-- /.col -->
-          </div>
-        </form>
-
-        
-        <!-- /.social-auth-links -->
-
-    
-        <p class="mb-0">
-          <a href="/register" class="text-center">Register</a>
-        </p>
-      </div>
-      <!-- /.card-body -->
     </div>
-    <!-- /.card -->
   </div>
-  <!-- /.login-box -->
 
   <!-- jQuery -->
   <script src="{{ asset('template/plugins/jquery/jquery.min.js') }}"></script>
