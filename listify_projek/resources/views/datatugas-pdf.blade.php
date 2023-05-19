@@ -1,56 +1,53 @@
-use Carbon\Carbon;
-
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-#customers {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-#customers td, #customers th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#customers tr:nth-child(even){background-color: #f2f2f2;}
-
-#customers tr:hover {background-color: #ddd;}
-
-#customers th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #4CAF50;
-  color: white;
-}
-</style>
+    <title>Data Tugas</title>
+    <style>
+        .table {
+            @apply bg-white border-collapse w-full;
+        }
+        
+        .table th, .table td {
+            @apply border border-gray-300 py-2 px-4;
+        }
+        
+        .table th {
+            @apply bg-green-600 text-white;
+        }
+        
+        .table tr:nth-child(even) {
+            @apply bg-gray-100;
+        }
+        
+        .table tr:hover {
+            @apply bg-gray-200;
+        }
+    </style>
 </head>
-<body>
-<h1> Data Tugas </h1>
-<table id="customers">
-  <tr>
-    <th>No</th>
-    <th>Title</th>
-    <th>Status</th>
-    <th>Deadline</th>
-  </tr>
-  @php
-      $no=1;
-  @endphp
-  @foreach ($data as $row)
-    <tr>
-    <td>{{ $no++}}</td>
-    <td>{{ $row->nama }}</td>
-    <td>{{ $row->status }}</td>
-    <td>{{ \Carbon\Carbon::parse($row->deadline)->format('d M Y') }}</td>
-  </tr>  
-  @endforeach
-  
-  
-</table>
-
+<body class="p-8">
+    <h1 class="text-3xl font-bold mb-4">Data Tugas</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="py-4 px-6">No</th>
+                <th class="py-4 px-6">Title</th>
+                <th class="py-4 px-6">Status</th>
+                <th class="py-4 px-6">Deadline</th>
+            </tr>
+        </thead>
+        <tbody>
+            @php
+                $no = 1;
+            @endphp
+            @foreach ($data as $row)
+                <tr>
+                    <td class="py-4 px-6">{{ $no++ }}</td>
+                    <td class="py-4 px-6">{{ $row->nama }}</td>
+                    <td class="py-4 px-6">{{ $row->status }}</td>
+                    <td class="py-4 px-6">{{ \Carbon\Carbon::parse($row->deadline)->format('d M Y') }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
 </body>
 </html>

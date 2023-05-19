@@ -20,7 +20,7 @@
 </head>
 
 <body class="hold-transition login-page">
-<body background = "{{ asset('template/dist/img/fmipa.jpg') }}"class="hold-transition login-page">
+<body background = "{{ asset('template/dist/img/bglistify.jpg') }}"class="hold-transition login-page">
   <div class="login-box">
     <!-- /.login-logo -->
     <div class="card card-outline card-primary">

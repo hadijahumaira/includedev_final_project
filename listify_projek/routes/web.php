@@ -18,7 +18,7 @@ use Carbon\Carbon;
 |
 */
 
-Route::get('/', function () {
+Route::get('/home', function () {
     $jumlahtugas = Listify::count();
     $jumlahtodolist = Listify::where('status','ToDo')->count();
     $jumlahdoinglist = Listify::where('status','Doing')->count();
@@ -29,7 +29,7 @@ Route::get('/', function () {
     return view('welcome',compact('notif', 'jumlahtugas','jumlahtodolist','jumlahdoinglist','jumlahdonelist', 'data'));
 })->name('home')->middleware('auth');
 
-Route::get('landingpage', function(){
+Route::get('/', function(){
     return view('landingpage');
 });
 

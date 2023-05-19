@@ -18,8 +18,8 @@
   <link rel="stylesheet" href="{{ asset('template/dist/css/adminlte.min.css') }}">
 </head>
 
-<body class="hold-transition login-page">
-  <body background = "{{ asset('template/dist/img/fmipa.jpg') }}"class="hold-transition login-page">
+
+  <body class="login-page" background = "{{ asset('template/dist/img/bglistify.jpg') }}">
   <div class="login-box">
     <!-- /.login-logo -->
     <div class="card card-outline card-primary">
